@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALP Plumbing SEO Checklist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #667eea;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            background: #e2e8f0;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .phase {
+            margin: 30px 0;
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+        }
+
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .phase-title {
+            font-size: 1.5em;
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        .phase-meta {
+            font-size: 0.9em;
+            color: #718096;
+            margin: 5px 0;
+        }
+
+        .phase-progress {
+            background: #f7fafc;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .checklist-item:hover {
+            background: #edf2f7;
+            transform: translateX(5px);
+        }
+
+        .checklist-item.completed {
+            background: #d4f4dd;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 15px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            flex-grow: 1;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+
+        .checklist-item.completed label {
+            text-decoration: line-through;
+            color: #718096;
+        }
+
+        .sub-items {
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        .sub-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 0.95em;
+        }
+
+        .sub-item input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .priority-critical {
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .priority-high {
+            background: #feebc8;
+            color: #c05621;
+        }
+
+        .priority-medium {
+            background: #bee3f8;
+            color: #2c5282;
+        }
+
+        .collapsible-content {
+            max-height: 2000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .collapsible-content.collapsed {
+            max-height: 0;
+        }
+
+        .collapse-icon {
+            transition: transform 0.3s ease;
+            font-size: 1.2em;
+        }
+
+        .collapsed .collapse-icon {
+            transform: rotate(-90deg);
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .reset-button {
+            background: #fc8181;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+
+        .reset-button:hover {
+            background: #f56565;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .phase-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 ALP Plumbing SEO Checklist</h1>
+            <p class="subtitle">Your Roadmap to Dominating Atlanta Plumber Search Results</p>
+        </header>
+
+        <div class="quick-stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-completed">0</div>
+                <div class="stat-label">Tasks Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-remaining">0</div>
+                <div class="stat-label">Tasks Remaining</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completion-percent">0%</div>
+                <div class="stat-label">Overall Progress</div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width: 0%">0%</div>
+        </div>
+
+        <!-- PHASE 1: GOOGLE BUSINESS PROFILE -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase1')">
+                <div>
+                    <div class="phase-title">
+                        <span class="collapse-icon">▼</span> PHASE 1: Google Business Profile
+                        <span class="priority-badge priority-critical">CRITICAL - 40% OF RANKING</span>
+                    </div>
+                    <div class="phase-meta">⏱️ Timeline: Week 1 | This is your #1 priority!</div>
+                </div>
+                <div class="phase-progress" id="phase1-progress">0/13</div>
+            </div>
+            <div class="collapsible-content" id="phase1">
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-claim" onchange="updateProgress()">
+                    <label for="gbp-claim">
+                        <strong>Claim & Verify Google Business Profile</strong>
+                        <div class="sub-items">
+                            <div class="sub-item">
+                                <input type="checkbox" id="gbp-1" onchange="updateProgress()">
+                                <label for="gbp-1">Go to business.google.com and search "ALP Plumbing LLC"</label>
+                            </div>
+                            <div class="sub-item">
+                                <input type="checkbox" id="gbp-2" onchange="updateProgress()">
+                                <label for="gbp-2">Claim your listing (or create if doesn't exist)</label>
+                            </div>
+                            <div class="sub-item">
+                                <input type="checkbox" id="gbp-3" onchange="updateProgress()">
+                                <label for="gbp-3">Verify via postcard, phone, or video</label>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-name" onchange="updateProgress()">
+                    <label for="gbp-name">Set Business Name: "ALP Plumbing LLC" (exact legal name)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-category" onchange="updateProgress()">
+                    <label for="gbp-category">Set Primary Category: "Plumber"</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-additional-cat" onchange="updateProgress()">
+                    <label for="gbp-additional-cat">
+                        <strong>Add ALL Additional Categories</strong>
+                        <div class="sub-items">
+                            <div class="sub-item">
+                                <input type="checkbox" id="cat-1" onchange="updateProgress()">
+                                <label for="cat-1">Plumbing Service</label>
+                            </div>
+                            <div class="sub-item">
+                                <input type="checkbox" id="cat-2" onchange="updateProgress()">
+                                <label for="cat-2">Drain Cleaning Service</label>
+                            </div>
+                            <div class="sub-item">
+                                <input type="checkbox" id="cat-3" onchange="updateProgress()">
+                                <label for="cat-3">Water Heater Installation Service</label>
+                            </div>
+                            <div class="sub-item">
+                                <input type="checkbox" id="cat-4" onchange="updateProgress()">
+                                <label for="cat-4">Water Heater Repair Service</label>
+                            </div>
+                            <div class="sub-item">
+                                <input type="checkbox" id="cat-5" onchange="updateProgress()">
+                                <label for="cat-5">Emergency Plumber</label>
+                            </div>
+                            <div class="sub-item">
+                                <input type="checkbox" id="cat-6" onchange="updateProgress()">
+                                <label for="cat-6">Commercial Plumber</label>
+                            </div>
+                            <div class="sub-item">
+                                <input type="checkbox" id="cat-7" onchange="updateProgress()">
+                                <label for="cat-7">Sewer Service</label>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-service-areas" onchange="updateProgress()">
+                    <label for="gbp-service-areas">Add ALL 22 service area cities (Snellville, Lawrenceville, Atlanta, etc.)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-hours" onchange="updateProgress()">
+                    <label for="gbp-hours">Set business hours + check "Open 24 hours" for emergency availability</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-description" onchange="updateProgress()">
+                    <label for="gbp-description">Add the 750-character keyword-rich business description</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-photos" onchange="updateProgress()">
+                    <label for="gbp-photos">Upload minimum 30 photos (logo, trucks, team, before/after work)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-services" onchange="updateProgress()">
+                    <label for="gbp-services">Add all 12 services with pricing (Residential, Emergency, Drain Cleaning, etc.)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="gbp-weekly-posts" onchange="updateProgress()">
+                    <label for="gbp-weekly-posts">Set up system to post 2-3x per week on GBP</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 2: REVIEWS -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase2')">
+                <div>
+                    <div class="phase-title">
+                        <span class="collapse-icon">▼</span> PHASE 2: Review Generation System
+                        <span class="priority-badge priority-critical">CRITICAL - ONGOING</span>
+                    </div>
+                    <div class="phase-meta">🎯 Goal: 100+ reviews in 6 months (5-10 per week)</div>
+                </div>
+                <div class="phase-progress" id="phase2-progress">0/8</div>
+            </div>
+            <div class="collapsible-content" id="phase2">
+                <div class="checklist-item">
+                    <input type="checkbox" id="review-link" onchange="updateProgress()">
+                    <label for="review-link">Create easy review link (bit.ly/alp-plumbing-review)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="review-script" onchange="updateProgress()">
+                    <label for="review-script">Train team on asking customers for reviews using the script</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="review-text" onchange="updateProgress()">
+                    <label for="review-text">Set up automated follow-up text system (within 24 hours)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="review-qr-card" onchange="updateProgress()">
+                    <label for="review-qr-card">Add QR code to business cards</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="review-qr-invoice" onchange="updateProgress()">
+                    <label for="review-qr-invoice">Add QR code to invoices</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="review-qr-truck" onchange="updateProgress()">
+                    <label for="review-qr-truck">Add QR code to truck signage</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="review-qr-hanger" onchange="updateProgress()">
+                    <label for="review-qr-hanger">Create leave-behind door hangers with QR code</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="review-respond" onchange="updateProgress()">
+                    <label for="review-respond">Establish system to respond to ALL reviews within 24 hours</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 3: CITY LANDING PAGES -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase3')">
+                <div>
+                    <div class="phase-title">
+                        <span class="collapse-icon">▼</span> PHASE 3: City Landing Pages
+                        <span class="priority-badge priority-high">HIGH PRIORITY</span>
+                    </div>
+                    <div class="phase-meta">⏱️ Timeline: Week 2-3 | Already created! ✅</div>
+                </div>
+                <div class="phase-progress" id="phase3-progress">0/4</div>
+            </div>
+            <div class="collapsible-content" id="phase3">
+                <div class="checklist-item">
+                    <input type="checkbox" id="city-priority1" onchange="updateProgress()">
+                    <label for="city-priority1">Verify Priority 1 cities are live (Atlanta, Snellville, Lawrenceville, Decatur, Stone Mountain)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="city-priority2" onchange="updateProgress()">
+                    <label for="city-priority2">Add Priority 2 cities (Duluth, Suwanee, Lilburn, Tucker, Conyers)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="city-schema" onchange="updateProgress()">
+                    <label for="city-schema">Verify each city page has proper LocalBusiness schema markup</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="city-internal-links" onchange="updateProgress()">
+                    <label for="city-internal-links">Add internal links from city pages to main service pages</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 4: LOCAL CITATIONS -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase4')">
+                <div>
+                    <div class="phase-title">
+                        <span class="collapse-icon">▼</span> PHASE 4: Local Citations
+                        <span class="priority-badge priority-high">HIGH PRIORITY</span>
+                    </div>
+                    <div class="phase-meta">⏱️ Timeline: Week 2-4 | NAP consistency is CRITICAL!</div>
+                </div>
+                <div class="phase-progress" id="phase4-progress">0/16</div>
+            </div>
+            <div class="collapsible-content" id="phase4">
+                <p style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                    <strong>⚠️ NAP Must Be IDENTICAL Everywhere:</strong><br>
+                    ALP Plumbing LLC<br>
+                    2958 Centerville Rosebud Rd<br>
+                    Snellville, GA 30039<br>
+                    (678) 789-4177<br>
+                    https://www.alpplumbingllc.com
+                </p>
+
+                <h3 style="margin: 20px 0 10px 0; color: #2d3748;">Tier 1 - Essential Directories</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-google" onchange="updateProgress()">
+                    <label for="cite-google">Google Business Profile - business.google.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-yelp" onchange="updateProgress()">
+                    <label for="cite-yelp">Yelp - biz.yelp.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-facebook" onchange="updateProgress()">
+                    <label for="cite-facebook">Facebook Business - facebook.com/business</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-apple" onchange="updateProgress()">
+                    <label for="cite-apple">Apple Maps - mapsconnect.apple.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-bing" onchange="updateProgress()">
+                    <label for="cite-bing">Bing Places - bingplaces.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-nextdoor" onchange="updateProgress()">
+                    <label for="cite-nextdoor">Nextdoor Business - business.nextdoor.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-angi" onchange="updateProgress()">
+                    <label for="cite-angi">Angi - angi.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-homeadvisor" onchange="updateProgress()">
+                    <label for="cite-homeadvisor">HomeAdvisor - homeadvisor.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-thumbtack" onchange="updateProgress()">
+                    <label for="cite-thumbtack">Thumbtack - thumbtack.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-bbb" onchange="updateProgress()">
+                    <label for="cite-bbb">BBB - bbb.org</label>
+                </div>
+
+                <h3 style="margin: 20px 0 10px 0; color: #2d3748;">Tier 2 - Industry Directories</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-porch" onchange="updateProgress()">
+                    <label for="cite-porch">Porch.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-houzz" onchange="updateProgress()">
+                    <label for="cite-houzz">Houzz.com</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-buildzoom" onchange="updateProgress()">
+                    <label for="cite-buildzoom">BuildZoom</label>
+                </div>
+
+                <h3 style="margin: 20px 0 10px 0; color: #2d3748;">Tier 3 - Local Georgia Directories</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-atlanta-chamber" onchange="updateProgress()">
+                    <label for="cite-atlanta-chamber">Atlanta Chamber of Commerce</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-gwinnett-chamber" onchange="updateProgress()">
+                    <label for="cite-gwinnett-chamber">Gwinnett Chamber of Commerce</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="cite-snellville" onchange="updateProgress()">
+                    <label for="cite-snellville">Snellville business directory</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 5: WEBSITE DEPLOYMENT -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase5')">
+                <div>
+                    <div class="phase-title">
+                        <span class="collapse-icon">▼</span> PHASE 5: Website Deployment
+                        <span class="priority-badge priority-high">HIGH PRIORITY</span>
+                    </div>
+                    <div class="phase-meta">⏱️ Timeline: Week 1 | Get your site live!</div>
+                </div>
+                <div class="phase-progress" id="phase5-progress">0/6</div>
+            </div>
+            <div class="collapsible-content" id="phase5">
+                <div class="checklist-item">
+                    <input type="checkbox" id="deploy-vercel" onchange="updateProgress()">
+                    <label for="deploy-vercel">Deploy website to Vercel</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="deploy-domain" onchange="updateProgress()">
+                    <label for="deploy-domain">Transfer domain from Square to Vercel</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="deploy-ssl" onchange="updateProgress()">
+                    <label for="deploy-ssl">Verify SSL certificate is working (HTTPS)</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="deploy-search-console" onchange="updateProgress()">
+                    <label for="deploy-search-console">Submit site to Google Search Console</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="deploy-analytics" onchange="updateProgress()">
+                    <label for="deploy-analytics">Set up Google Analytics 4</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="deploy-sitemap" onchange="updateProgress()">
+                    <label for="deploy-sitemap">Create and submit XML sitemap</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 6: CONTENT MARKETING -->
+        <div class="phase">
+            <div class="phase-header" onclick="togglePhase('phase6')">
+                <div>
+                    <div class="phase-title">
+                        <span class="collapse-icon">▼</span> PHASE 6: Content Marketing
+                        <span class="priority-badge priority-medium">MEDIUM PRIORITY</span>
+                    </div>
+                    <div class="phase-meta">⏱️ Timeline: Ongoing | 2-4 blog posts per month</div>
+                </div>
+                <div class="phase-progress" id="phase6-progress">0/4</div>
+            </div>
+            <div class="collapsible-content" id="phase6">
+                <div class="checklist-item">
+                    <input type="checkbox" id="blog-1" onchange="updateProgress()">
+                    <label for="blog-1">Month 1: "How to Find the Best Plumber in Atlanta"</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="blog-2" onchange="updateProgress()">
+                    <label for="blog-2">Month 1: "Emergency Plumbing in Gwinnett County"</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="blog-3" onchange="updateProgress()">
+                    <label for="blog-3">Month 2: "Atlanta Water Heater Guide: Repair vs. Replace"</label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="blog-4" onchange="updateProgress()">
+                    <label for="blog-4">Month 2: "Drain Cleaning in Atlanta: DIY vs. Professional"</label>
+                </div>
+            </div>
+        </div>
+
+        <button class="reset-button" onclick="resetProgress()">🔄 Reset All Progress</button>
+    </div>
+
+    <script>
+        // Load saved progress from localStorage
+        function loadProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const saved = localStorage.getItem(checkbox.id);
+                if (saved === 'true') {
+                    checkbox.checked = true;
+                    const item = checkbox.closest('.checklist-item');
+                    if (item) item.classList.add('completed');
+                }
+            });
+            updateProgress();
+        }
+
+        // Save progress and update UI
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let totalChecked = 0;
+            let totalItems = checkboxes.length;
+
+            checkboxes.forEach(checkbox => {
+                // Save state
+                localStorage.setItem(checkbox.id, checkbox.checked);
+                
+                // Update item styling
+                const item = checkbox.closest('.checklist-item');
+                if (item) {
+                    if (checkbox.checked) {
+                        item.classList.add('completed');
+                    } else {
+                        item.classList.remove('completed');
+                    }
+                }
+
+                if (checkbox.checked) totalChecked++;
+            });
+
+            // Update overall progress
+            const percentage = Math.round((totalChecked / totalItems) * 100);
+            document.getElementById('progress-fill').style.width = percentage + '%';
+            document.getElementById('progress-fill').textContent = percentage + '%';
+            document.getElementById('total-completed').textContent = totalChecked;
+            document.getElementById('total-remaining').textContent = totalItems - totalChecked;
+            document.getElementById('completion-percent').textContent = percentage + '%';
+
+            // Update phase progress
+            updatePhaseProgress('phase1');
+            updatePhaseProgress('phase2');
+            updatePhaseProgress('phase3');
+            updatePhaseProgress('phase4');
+            updatePhaseProgress('phase5');
+            updatePhaseProgress('phase6');
+        }
+
+        function updatePhaseProgress(phaseId) {
+            const phase = document.getElementById(phaseId);
+            if (!phase) return;
+
+            const checkboxes = phase.querySelectorAll('input[type="checkbox"]');
+            let checked = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) checked++;
+            });
+
+            const progressEl = document.getElementById(phaseId + '-progress');
+            if (progressEl) {
+                progressEl.textContent = `${checked}/${checkboxes.length}`;
+            }
+        }
+
+        function togglePhase(phaseId) {
+            const content = document.getElementById(phaseId);
+            const header = content.previousElementSibling;
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                header.classList.remove('collapsed');
+            } else {
+                content.classList.add('collapsed');
+                header.classList.add('collapsed');
+            }
+        }
+
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset ALL progress? This cannot be undone.')) {
+                localStorage.clear();
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+                updateProgress();
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProgress();
+        });
+    </script>
+</body>
+</html>
