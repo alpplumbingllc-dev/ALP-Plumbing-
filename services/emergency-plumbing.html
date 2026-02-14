@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24/7 Emergency Plumber Snellville & Atlanta | ALP Plumbing LLC</title>
+    <meta name="description" content="24/7 emergency plumber in Snellville & Atlanta. Burst pipes, flooding, gas leaks, no hot water. Fast response. Call (678) 789-4177 NOW.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--primary-gold:#C9A962;--logo-blue:#2E4A9E;--deep-navy:#0A1628;--charcoal:#1A1A2E;--off-white:#F8F6F3;--light-cream:#FAF9F7;--text-dark:#1A1A1A;--text-light:#6B6B6B;--emergency-red:#c0392b}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Montserrat',sans-serif;background:var(--off-white);color:var(--text-dark);line-height:1.7}
+        .nav-container{position:fixed;top:0;left:0;width:100%;z-index:1000;background:var(--deep-navy)}nav{max-width:1400px;margin:0 auto;padding:15px 50px;display:flex;justify-content:space-between;align-items:center}.logo img{height:50px}.nav-links{display:flex;list-style:none;gap:35px}.nav-links a{color:white;text-decoration:none;font-size:.85rem}
+        .nav-cta{background:var(--emergency-red);color:white;padding:12px 24px;font-size:.8rem;font-weight:700;text-decoration:none;animation:pulse 2s infinite;border-radius:4px}
+        @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(192,57,43,.7)}50%{box-shadow:0 0 25px 8px rgba(192,57,43,0)}}
+        
+        /* DRAMATIC Hero - Flooded basement image */
+        .service-hero{position:relative;padding:200px 50px 120px;color:white;text-align:center;background:url('https://images.unsplash.com/photo-1525438160292-a4a860951f2e?w=1920&q=80') center/cover no-repeat}
+        .service-hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(139,0,0,0.85) 0%,rgba(26,6,6,0.9) 100%)}
+        .service-hero>*{position:relative;z-index:1}
+        .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.7);margin-bottom:20px}.breadcrumb a{color:var(--primary-gold);text-decoration:none}
+        .service-hero h1{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:500;margin-bottom:20px;text-shadow:0 2px 30px rgba(0,0,0,0.5)}
+        .service-hero h1 span{color:#ff6b6b}
+        .service-hero p{font-size:1.2rem;color:rgba(255,255,255,.95);max-width:700px;margin:0 auto 40px}
+        .emergency-badge{display:inline-block;background:var(--emergency-red);color:white;padding:8px 20px;font-size:.8rem;font-weight:700;letter-spacing:.1em;border-radius:30px;margin-bottom:25px;animation:pulse 2s infinite}
+        
+        .btn-emergency{background:var(--emergency-red);color:white;padding:22px 50px;font-size:1.1rem;font-weight:700;text-decoration:none;border-radius:6px;display:inline-flex;align-items:center;gap:12px;animation:pulse 2s infinite;transition:transform .3s}
+        .btn-emergency:hover{transform:scale(1.05)}
+        
+        .section-container{max-width:1200px;margin:0 auto;padding:0 50px}section{padding:80px 0}
+        .section-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;margin-bottom:15px}
+        .section-line{width:60px;height:2px;background:var(--emergency-red);margin-bottom:30px}
+        
+        .services-detail{background:white}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:40px}
+        .service-item{background:var(--light-cream);padding:30px;border-left:4px solid var(--emergency-red);transition:all .3s}
+        .service-item:hover{transform:translateX(5px);box-shadow:0 5px 20px rgba(192,57,43,0.15)}
+        .service-item h4{font-size:1.1rem;font-weight:600;margin-bottom:10px;color:var(--emergency-red)}
+        .service-item p{font-size:.9rem;color:var(--text-light)}
+        
+        .steps-section{background:var(--light-cream)}
+        .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-top:40px}
+        .step-item{text-align:center;padding:30px;background:white;border-radius:12px;position:relative}
+        .step-number{width:60px;height:60px;background:var(--emergency-red);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.5rem;margin:0 auto 20px}
+        .step-item h4{color:var(--deep-navy);margin-bottom:10px}
+        .step-item p{font-size:.9rem;color:var(--text-light)}
+        
+        .mid-cta{background:var(--emergency-red);color:white;text-align:center;padding:60px 50px}
+        .mid-cta h3{font-family:'Cormorant Garamond',serif;font-size:2.5rem;margin-bottom:10px}
+        .mid-cta .phone{font-size:3rem;font-weight:700;color:white;text-decoration:none;display:block;margin:20px 0}
+        .mid-cta p{font-size:1.1rem;opacity:.9}
+        
+        .cta-section{background:linear-gradient(135deg,#1a0505,#2d1010);color:white;text-align:center;padding:80px 50px}
+        .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;margin-bottom:15px}
+        .cta-phone{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--emergency-red);text-decoration:none;display:block;margin:20px 0}
+        
+        footer{background:var(--deep-navy);color:rgba(255,255,255,.6);padding:40px;text-align:center;font-size:.85rem}footer a{color:var(--primary-gold);text-decoration:none}
+        
+        .mobile-booking-bar{display:none;position:fixed;bottom:0;left:0;width:100%;background:var(--emergency-red);padding:15px 20px;z-index:999}
+        .mobile-booking-bar a{display:block;text-align:center;color:white;font-size:1.1rem;font-weight:700;text-decoration:none}
+        
+        @media(max-width:768px){
+            .nav-links{display:none}nav{padding:15px 20px}.logo img{height:40px}
+            .service-hero{padding:150px 20px 80px}.service-hero h1{font-size:2.2rem}
+            .section-container{padding:0 20px}
+            .mobile-booking-bar{display:block}body{padding-bottom:70px}
+            .mid-cta .phone{font-size:2rem}
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container"><nav><a href="../index.html" class="logo"><img src="../alp_logo_.jpg" alt="ALP Plumbing LLC"></a><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../index.html#services">Services</a></li><li><a href="../index.html#reviews">Reviews</a></li><li><a href="../index.html#areas">Areas</a></li></ul><a href="tel:678-789-4177" class="nav-cta">🚨 EMERGENCY</a></nav></div>
+
+    <section class="service-hero">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#services">Services</a> / Emergency Plumbing</div>
+        <div class="emergency-badge">🚨 24/7 EMERGENCY SERVICE</div>
+        <h1>Plumbing <span>Emergency?</span></h1>
+        <p>Burst pipes, flooding, sewage backup, gas leaks — we respond FAST when disaster strikes. Available 24 hours a day, 7 days a week, 365 days a year.</p>
+        <a href="tel:678-789-4177" class="btn-emergency">📞 CALL NOW: (678) 789-4177</a>
+    </section>
+
+    <section class="services-detail">
+        <div class="section-container">
+            <h2 class="section-title">Emergency Services We Handle</h2>
+            <div class="section-line"></div>
+            <p>When plumbing disasters strike, every minute counts. Our emergency team is equipped to handle the worst situations.</p>
+            <div class="services-grid">
+                <div class="service-item"><h4>🚿 Burst Pipes</h4><p>Immediate response to stop water damage. We repair and replace burst pipes fast.</p></div>
+                <div class="service-item"><h4>🌊 Flooding</h4><p>Emergency water shutoff and source identification to stop flooding immediately.</p></div>
+                <div class="service-item"><h4>💩 Sewer Backup</h4><p>Sewage backing up into your home? We clear the line and restore flow.</p></div>
+                <div class="service-item"><h4>🔥 No Hot Water</h4><p>Water heater failed? We provide emergency repairs and replacements.</p></div>
+                <div class="service-item"><h4>⚠️ Gas Leaks</h4><p>Smell gas? Call immediately. We handle gas line emergencies safely.</p></div>
+                <div class="service-item"><h4>🚽 Overflowing Toilet</h4><p>Toilet overflowing and won't stop? We'll fix it fast.</p></div>
+                <div class="service-item"><h4>🧊 Frozen Pipes</h4><p>Safe thawing and repair to prevent bursting.</p></div>
+                <div class="service-item"><h4>💧 Major Leaks</h4><p>Water pouring from walls or ceilings? We stop it now.</p></div>
+                <div class="service-item"><h4>🔧 Clogged Main Sewer</h4><p>Nothing draining? Emergency main line clearing available.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mid-cta">
+        <h3>DON'T WAIT — CALL NOW</h3>
+        <a href="tel:678-789-4177" class="phone">(678) 789-4177</a>
+        <p>A real person answers 24/7. Fast dispatch to your location.</p>
+    </section>
+
+    <section class="steps-section">
+        <div class="section-container">
+            <h2 class="section-title">What Happens When You Call</h2>
+            <div class="section-line"></div>
+            <div class="steps-grid">
+                <div class="step-item"><div class="step-number">1</div><h4>Immediate Answer</h4><p>A real person answers — no voicemail, no waiting.</p></div>
+                <div class="step-item"><div class="step-number">2</div><h4>Fast Dispatch</h4><p>Licensed plumber dispatched immediately to your location.</p></div>
+                <div class="step-item"><div class="step-number">3</div><h4>Rapid Arrival</h4><p>We arrive as quickly as possible, typically within 60 minutes.</p></div>
+                <div class="step-item"><div class="step-number">4</div><h4>Problem Solved</h4><p>We diagnose and fix the emergency correctly.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Plumbing Emergency? We're Ready.</h2>
+        <p>Available 24/7/365 — Snellville, Atlanta & Metro Area</p>
+        <a href="tel:678-789-4177" class="cta-phone">📞 (678) 789-4177</a>
+    </section>
+
+    <footer><p>© 2025 ALP Plumbing LLC | <a href="../index.html">Home</a> | <a href="tel:678-789-4177">(678) 789-4177</a></p><p>2958 Centerville Rosebud Rd, Snellville, GA 30039</p></footer>
+
+    <div class="mobile-booking-bar"><a href="tel:678-789-4177">🚨 CALL EMERGENCY: (678) 789-4177</a></div>
+</body>
+</html>
