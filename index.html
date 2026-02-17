@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALP Plumbing LLC | #1 Rated Plumber in Georgia | 24/7 Emergency Service Atlanta Metro</title>
+    <meta name="description" content="ALP Plumbing LLC offers 24/7 emergency plumbing services across Georgia, Gwinnett County & Atlanta Metro. Licensed, insured plumbers. Free estimates. Call (678) 789-4177 for same-day service.">
+    <meta name="keywords" content="plumber Snellville GA, emergency plumber Atlanta, plumbing services Gwinnett County, water heater repair Snellville, drain cleaning Atlanta, commercial plumber Georgia">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ALP Plumbing LLC">
+    <link rel="canonical" href="https://www.alpplumbingllc.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alpplumbingllc.com/">
+    <meta property="og:title" content="ALP Plumbing LLC | Top-Rated Plumber in Georgia & Atlanta Metro">
+    <meta property="og:description" content="Professional plumbing services across Georgia & Atlanta Metro. 24/7 emergency service, licensed & insured. Call (678) 789-4177">
+    <meta property="og:image" content="https://www.alpplumbingllc.com/alp_logo_.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.alpplumbingllc.com/alp_logo_.jpg">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-GA">
+    <meta name="geo.placename" content="Snellville">
+    <meta name="geo.position" content="33.8573;-84.0199">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Plumber",
+        "name": "ALP Plumbing LLC",
+        "url": "https://www.alpplumbingllc.com",
+        "telephone": "+1-678-789-4177",
+        "email": "info@alpplumbingllc.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2958 Centerville Rosebud Rd",
+            "addressLocality": "Snellville",
+            "addressRegion": "GA",
+            "postalCode": "30039",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "33.8573",
+            "longitude": "-84.0199"
+        },
+        "areaServed": ["Snellville", "Lawrenceville", "Loganville", "Grayson", "Stone Mountain", "Lilburn", "Conyers", "Dacula", "Atlanta", "Gwinnett County"],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Brand Colors - Gold (kept as requested) */
+            --primary-gold: #C9A962;
+            --primary-gold-light: #E5D4A9;
+            --primary-gold-dark: #A68B4B;
+            
+            /* Logo Colors - Blue & Silver (accent use) */
+            --logo-blue: #2E4A9E;
+            --logo-blue-light: #4A6BC4;
+            --logo-silver: #8C8C8C;
+            --logo-silver-light: #B8B8B8;
+            
+            /* Background Colors */
+            --deep-navy: #0A1628;
+            --charcoal: #1A1A2E;
+            --off-white: #F8F6F3;
+            --light-cream: #FAF9F7;
+            
+            /* Text Colors */
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+            
+            /* Status */
+            --success-green: #2D5A27;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--off-white);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+            border-radius: 4px;
+        }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--deep-navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-content {
+            text-align: center;
+        }
+
+        .preloader-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 0.5em;
+            color: var(--primary-gold);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .preloader-line {
+            width: 60px;
+            height: 1px;
+            background: var(--primary-gold);
+            margin: 20px auto;
+            animation: expand 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes expand {
+            0%, 100% { transform: scaleX(0.5); }
+            50% { transform: scaleX(1); }
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+
+        .nav-container.scrolled {
+            background: rgba(10, 22, 40, 0.97);
+            backdrop-filter: blur(20px);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 55px;
+            width: auto;
+            background: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover img {
+            transform: scale(1.02);
+        }
+        
+        /* Footer logo slightly larger */
+        .footer-brand .logo img {
+            height: 70px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--primary-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: transparent;
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 12px 30px;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-gold);
+            color: var(--deep-navy);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        .nav-links.mobile-active {
+            display: flex !important;
+        }
+
+        /* Hero Section with Video */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(10, 22, 40, 0.85) 0%,
+                rgba(26, 26, 46, 0.75) 50%,
+                rgba(10, 22, 40, 0.85) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            padding: 0 30px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(201, 169, 98, 0.15);
+            border: 1px solid rgba(201, 169, 98, 0.3);
+            padding: 10px 25px;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease 0.5s both;
+        }
+
+        .hero-badge span {
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--primary-gold-light);
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.7s both;
+        }
+
+        .hero-title .accent {
+            color: var(--primary-gold);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.1em;
+            margin-bottom: 50px;
+            animation: fadeInUp 1s ease 0.9s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 1.1s both;
+        }
+
+        .btn-primary {
+            background: var(--primary-gold);
+            color: var(--deep-navy);
+            padding: 18px 45px;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(201, 169, 98, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 45px;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            animation: fadeIn 1s ease 1.5s both;
+        }
+
+        .scroll-indicator span {
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            writing-mode: vertical-rl;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--primary-gold), transparent);
+            animation: scrollPulse 2s ease infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { transform: scaleY(1); opacity: 1; }
+            50% { transform: scaleY(0.5); opacity: 0.5; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--deep-navy);
+            padding: 40px 0;
+            overflow: hidden;
+        }
+
+        .trust-bar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .trust-icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--primary-gold);
+            background: linear-gradient(135deg, var(--logo-blue) 0%, #1a3a7e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .trust-text h4 {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            margin-bottom: 3px;
+        }
+
+        .trust-text p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 120px 0;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .section-title.light {
+            color: white;
+        }
+
+        .section-line {
+            width: 60px;
+            height: 1px;
+            background: var(--primary-gold);
+            margin: 30px auto 0;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--light-cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: 1px solid transparent;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-gold);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--logo-blue) 0%, #1a3a7e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .service-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 15px;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background: var(--deep-navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reviews::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 169, 98, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .reviews-carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .reviews-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .review-slide {
+            min-width: 100%;
+            padding: 0 20px;
+            opacity: 0.3;
+            transform: scale(0.9);
+            transition: all 0.6s ease;
+        }
+
+        .review-slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .review-card {
+            text-align: center;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(201, 169, 98, 0.2);
+        }
+
+        .review-stars {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .star {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+        }
+
+        .review-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: italic;
+            color: white;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .review-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .review-author-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+        }
+
+        .review-source {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .google-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .reviews-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        .reviews-nav button {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--primary-gold);
+            background: transparent;
+            color: var(--primary-gold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reviews-nav button:hover {
+            background: var(--primary-gold);
+            color: var(--deep-navy);
+        }
+
+        .reviews-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border: 1px solid var(--primary-gold);
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--primary-gold);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--off-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            width: 100%;
+        }
+
+        .about-image-main {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-image-accent {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 200px;
+            height: 200px;
+            background: var(--primary-gold);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-navy);
+        }
+
+        .about-image-accent .number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .about-image-accent .label {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .about-content .section-tag {
+            text-align: left;
+        }
+
+        .about-content .section-title {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .about-content .section-line {
+            margin: 0 0 40px 0;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .about-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--logo-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            border-radius: 6px;
+        }
+
+        .about-feature span {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--charcoal) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23C9A962" fill-opacity="0.1"/></svg>') repeat;
+            background-size: 30px 30px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 300;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+        }
+
+        .cta-phone {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-phone:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 30px rgba(201, 169, 98, 0.5);
+        }
+
+        /* Service Areas */
+        .areas {
+            background: var(--light-cream);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .area-card {
+            background: white;
+            padding: 30px 25px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .area-card:hover {
+            border-color: var(--logo-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(46, 74, 158, 0.15);
+        }
+
+        .area-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: var(--logo-blue);
+        }
+
+        /* County-based Service Areas */
+        .counties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .county-card {
+            background: white;
+            border: 2px solid var(--logo-blue);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .county-card:hover {
+            box-shadow: 0 10px 40px rgba(46, 74, 158, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .county-card.active {
+            border-color: var(--primary-gold);
+        }
+
+        .county-header {
+            background: linear-gradient(135deg, var(--logo-blue) 0%, #1a3a7e 100%);
+            color: white;
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .county-header h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .county-badge {
+            background: var(--primary-gold);
+            color: var(--deep-navy);
+            padding: 4px 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 20px;
+        }
+
+        .county-arrow {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .county-card.active .county-arrow {
+            transform: rotate(180deg);
+        }
+
+        .county-cities {
+            display: none;
+            padding: 20px 25px;
+            background: var(--light-cream);
+        }
+
+        .county-card.active .county-cities {
+            display: block;
+        }
+
+        .county-cities a {
+            display: inline-block;
+            background: white;
+            color: var(--text-dark);
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .county-cities a:hover {
+            background: var(--logo-blue);
+            color: white;
+            border-color: var(--logo-blue);
+        }
+
+        .city-cta {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        .btn-book-small {
+            display: inline-block;
+            background: var(--primary-gold);
+            color: var(--deep-navy);
+            padding: 12px 24px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-book-small:hover {
+            background: var(--primary-gold-light);
+            transform: translateY(-2px);
+        }
+
+        .area-card p {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            letter-spacing: 0.1em;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-navy);
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo {
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+        }
+
+        .footer-column h4 {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            margin-bottom: 25px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-certifications {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-certifications span {
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: var(--logo-silver-light);
+            padding: 8px 15px;
+            border: 1px solid var(--logo-silver);
+            background: rgba(140, 140, 140, 0.1);
+        }
+
+        /* Animations on Scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* BOOKING BUTTON STYLES */
+        .btn-book {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--logo-blue) 0%, #1a3a7e 100%);
+            color: white;
+            padding: 16px 32px;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-book:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(46, 74, 158, 0.4);
+        }
+
+        .btn-book.gold {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);
+            color: var(--deep-navy);
+        }
+
+        .btn-book.gold:hover {
+            box-shadow: 0 15px 40px rgba(201, 169, 98, 0.4);
+        }
+
+        /* Sticky Mobile Booking Bar */
+        .mobile-booking-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--deep-navy);
+            padding: 12px 15px;
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-booking-bar-inner {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .mobile-booking-bar a {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-booking-bar .btn-call {
+            background: var(--primary-gold);
+            color: var(--deep-navy);
+        }
+
+        .mobile-booking-bar .btn-schedule {
+            background: var(--logo-blue);
+            color: white;
+        }
+
+        /* Work Gallery */
+        .work-gallery {
+            background: var(--off-white);
+            padding: 100px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 25px;
+            background: white;
+        }
+
+        .gallery-caption h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--logo-blue);
+            margin-bottom: 8px;
+        }
+
+        .gallery-caption p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Gallery Clickable Overlay */
+        .gallery-item {
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            cursor: pointer;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 22, 40, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-zoom {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            nav {
+                padding: 20px 30px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--deep-navy);
+                flex-direction: column;
+                padding: 20px;
+                gap: 0;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 15px;
+                font-size: 0.9rem;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .about-image-accent {
+                bottom: 20px;
+                right: 20px;
+                width: 150px;
+                height: 150px;
+            }
+
+            .about-image-accent .number {
+                font-size: 3rem;
+            }
+
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+
+            .section-container {
+                padding: 0 25px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-bar-inner {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .review-card {
+                padding: 40px 20px;
+            }
+
+            .review-text {
+                font-size: 1.3rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Show mobile booking bar */
+            .mobile-booking-bar {
+                display: block;
+            }
+
+            /* Add padding to body for sticky bar */
+            body {
+                padding-bottom: 80px;
+            }
+
+            /* Improve touch targets */
+            .btn-primary, .btn-secondary, .btn-book {
+                padding: 16px 28px;
+                min-height: 50px;
+            }
+
+            .service-card {
+                padding: 35px 25px;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader with ALP Branding -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo" style="width: 90px; height: 90px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(201, 169, 98, 0.4);">
+                <span style="font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; color: #2E4A9E; letter-spacing: 0.1em;">ALP</span>
+            </div>
+            <div style="margin-top: 15px; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 0.3em; color: #8C8C8C;">PLUMBING</div>
+            <div style="margin-top: 5px; font-size: 0.65rem; color: var(--primary-gold); letter-spacing: 0.2em;">Since 1997</div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-container">
+        <nav>
+            <a href="#" class="logo">
+                <img src="alp_logo_.jpg" alt="ALP Plumbing LLC - Plumber in Georgia Since 1997">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#areas">Service Areas</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="nav-cta" target="_blank">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                Book Online
+            </a>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section with Video -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="https://cdn.coverr.co/videos/coverr-plumber-connecting-pipe-2458/1080p.mp4" type="video/mp4">
+                <!-- Fallback gradient background if video fails -->
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <span>5-Star Rated Plumbing Excellence</span>
+            </div>
+            <h1 class="hero-title">
+                Expert <span class="accent">Plumber</span> in Georgia<br>
+                <span style="font-size: 0.5em; color: var(--silver);">Serving Atlanta Metro & Gwinnett County</span>
+            </h1>
+            <p class="hero-subtitle">
+                ALP Plumbing LLC delivers top-rated residential and commercial plumbing services throughout the Atlanta metro area. Licensed, insured, and available 24/7 for emergency repairs. Experience the difference of working with true professionals.
+            </p>
+            <div class="hero-buttons">
+                <a href="tel:678-789-4177" class="btn-primary">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    Call (678) 789-4177
+                </a>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book gold" target="_blank">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    Schedule Online
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                    </svg>
+                </div>
+                <div class="trust-text">
+                    <h4>Licensed & Insured</h4>
+                    <p>Full coverage protection</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <div class="trust-text">
+                    <h4>Same Day Service</h4>
+                    <p>Rapid response times</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/>
+                    </svg>
+                </div>
+                <div class="trust-text">
+                    <h4>Transparent Pricing</h4>
+                    <p>No hidden fees</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+                    </svg>
+                </div>
+                <div class="trust-text">
+                    <h4>100% Satisfaction</h4>
+                    <p>Guaranteed results</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Our Expertise</span>
+                <h2 class="section-title">Services Designed for Excellence</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+                        </svg>
+                    </div>
+                    <h3>Residential Plumbing</h3>
+                    <p>From routine repairs to complete system overhauls, we deliver tailored solutions for your home with meticulous attention to detail.</p>
+                    <a href="services/residential-plumbing.html" class="service-link">View Services →</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/>
+                        </svg>
+                    </div>
+                    <h3>Commercial Plumbing</h3>
+                    <p>Reliable plumbing solutions for offices, retail spaces, medical facilities, and more. Minimizing disruption, maximizing efficiency.</p>
+                    <a href="services/commercial-plumbing.html" class="service-link">View Services →</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"/>
+                        </svg>
+                    </div>
+                    <h3>Water Heater Services</h3>
+                    <p>Expert installation, repair, and maintenance for all water heater types. Ensuring consistent hot water and energy efficiency.</p>
+                    <a href="services/water-heater.html" class="service-link">View Services →</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Drain Cleaning</h3>
+                    <p>Advanced drain cleaning and sewer services. We eliminate blockages and restore optimal flow with cutting-edge technology.</p>
+                    <a href="services/drain-cleaning.html" class="service-link">View Services →</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/>
+                        </svg>
+                    </div>
+                    <h3>Emergency Repairs</h3>
+                    <p>24/7 emergency services when you need them most. Fast response, expert solutions, complete peace of mind.</p>
+                    <a href="services/emergency-plumbing.html" class="service-link">View Services →</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/>
+                        </svg>
+                    </div>
+                    <h3>Water Filtration</h3>
+                    <p>Pure water solutions for healthier living. Custom filtration systems designed for your specific water quality needs.</p>
+                    <a href="services/water-filtration.html" class="service-link">View Services →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Client Testimonials</span>
+                <h2 class="section-title light">Words of Appreciation</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="reviews-carousel">
+                <div class="reviews-track" id="reviewsTrack">
+                    <div class="review-slide active">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">"ALP Plumbing exceeded all expectations. Their professionalism, attention to detail, and honest pricing made me a customer for life. I highly recommend their services!"</p>
+                            <div class="review-author">
+                                <span class="review-author-name">Michael Thompson</span>
+                                <span class="review-source">
+                                    <svg class="google-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                    </svg>
+                                    Google Review
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">"Called them for an emergency leak on a Sunday and they were at my door within an hour. Professional, efficient, and fairly priced. This is what quality service looks like."</p>
+                            <div class="review-author">
+                                <span class="review-author-name">Sarah Mitchell</span>
+                                <span class="review-source">
+                                    <svg class="google-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                    </svg>
+                                    Google Review
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">"We use ALP Plumbing for all our commercial properties in Gwinnett. Their reliability and workmanship are unmatched. A true partner for business owners."</p>
+                            <div class="review-author">
+                                <span class="review-author-name">David Chen</span>
+                                <span class="review-source">
+                                    <svg class="google-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                    </svg>
+                                    Google Review
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">"The team at ALP diagnosed a complex pipe issue that two other plumbers couldn't figure out. Fixed it same day at a reasonable price. True experts in their craft."</p>
+                            <div class="review-author">
+                                <span class="review-author-name">Jennifer Rodriguez</span>
+                                <span class="review-source">
+                                    <svg class="google-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                    </svg>
+                                    Google Review
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="review-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">"Honest, punctual, and thorough. They replaced our entire water heater system and left the area cleaner than they found it. Exceptional service from start to finish."</p>
+                            <div class="review-author">
+                                <span class="review-author-name">Robert Williams</span>
+                                <span class="review-source">
+                                    <svg class="google-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                    </svg>
+                                    Google Review
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-nav">
+                    <button id="prevReview">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+                        </svg>
+                    </button>
+                    <button id="nextReview">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="reviews-dots" id="reviewsDots">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                    <button class="dot" data-index="2"></button>
+                    <button class="dot" data-index="3"></button>
+                    <button class="dot" data-index="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll">
+                    <img src="images/ALP_Van.jpg" alt="ALP Plumbing Service Van - Serving Atlanta Metro Since 1997" class="about-image-main">
+                    <div class="about-image-accent">
+                        <span class="number">28+</span>
+                        <span class="label">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content animate-on-scroll">
+                    <span class="section-tag">About ALP Plumbing</span>
+                    <h2 class="section-title">Crafting Excellence,<br>One Pipe at a Time</h2>
+                    <div class="section-line"></div>
+                    <p class="about-text">ALP Plumbing has built its reputation on a foundation of integrity, expertise, and unwavering commitment to customer satisfaction. Established in 1997 and based in Gwinnett County, GA, we've been proudly serving the greater Gwinnett County area with distinction for over 28 years.</p>
+                    <p class="about-text">Our team of master plumbers brings decades of combined experience to every project, whether it's a simple repair or a complex commercial installation. We believe in transparent communication, fair pricing, and work that stands the test of time.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <span>Licensed Master Plumbers</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <span>Background Checked Team</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <span>Fully Insured & Bonded</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <span>Workmanship Guarantee</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 35px; display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book gold" target="_blank">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Schedule Service
+                        </a>
+                        <a href="tel:678-789-4177" class="btn-secondary" style="border-color: var(--logo-blue); color: var(--logo-blue);">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            Call (678) 789-4177
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="section-container">
+            <div class="cta-content animate-on-scroll">
+                <span class="section-tag">Ready to Begin?</span>
+                <h2 class="cta-title">Experience the ALP Difference</h2>
+                <p class="cta-subtitle">Contact us today for a free consultation and discover why Georgia trusts ALP Plumbing for all their plumbing needs.</p>
+                <a href="tel:678-789-4177" class="cta-phone">(678) 789-4177</a>
+                <div class="hero-buttons" style="margin-top: 25px; justify-content: center;">
+                    <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book gold" target="_blank">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        Book Appointment Online
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#01686f676e41606d71716d746c63686f666d6d622f626e6c" class="btn-secondary">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas - County Based -->
+    <section id="areas" class="areas">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Coverage</span>
+                <h2 class="section-title">Areas We Serve</h2>
+                <div class="section-line"></div>
+                <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Click on a county to see the cities we serve in that area.</p>
+            </div>
+
+            <div class="counties-grid">
+                <div class="county-card animate-on-scroll" onclick="toggleCounty(this)">
+                    <div class="county-header">
+                        <h3>Gwinnett County</h3>
+                        <span class="county-badge primary">Primary Service Area</span>
+                        <span class="county-arrow">▼</span>
+                    </div>
+                    <div class="county-cities">
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Snellville</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Lawrenceville</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Grayson</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Lilburn</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Dacula</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Duluth</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Suwanee</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Buford</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Norcross</a>
+                        <div class="city-cta">
+                            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book-small" target="_blank">Book Service in Gwinnett →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="county-card animate-on-scroll" onclick="toggleCounty(this)">
+                    <div class="county-header">
+                        <h3>DeKalb County</h3>
+                        <span class="county-arrow">▼</span>
+                    </div>
+                    <div class="county-cities">
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Stone Mountain</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Decatur</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Tucker</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Lithonia</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Clarkston</a>
+                        <div class="city-cta">
+                            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book-small" target="_blank">Book Service in DeKalb →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="county-card animate-on-scroll" onclick="toggleCounty(this)">
+                    <div class="county-header">
+                        <h3>Rockdale County</h3>
+                        <span class="county-arrow">▼</span>
+                    </div>
+                    <div class="county-cities">
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Conyers</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Milstead</a>
+                        <div class="city-cta">
+                            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book-small" target="_blank">Book Service in Rockdale →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="county-card animate-on-scroll" onclick="toggleCounty(this)">
+                    <div class="county-header">
+                        <h3>Walton County</h3>
+                        <span class="county-arrow">▼</span>
+                    </div>
+                    <div class="county-cities">
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Loganville</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Monroe</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Social Circle</a>
+                        <div class="city-cta">
+                            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book-small" target="_blank">Book Service in Walton →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="county-card animate-on-scroll" onclick="toggleCounty(this)">
+                    <div class="county-header">
+                        <h3>Fulton County</h3>
+                        <span class="county-arrow">▼</span>
+                    </div>
+                    <div class="county-cities">
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Atlanta</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Sandy Springs</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Roswell</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Alpharetta</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Johns Creek</a>
+                        <div class="city-cta">
+                            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book-small" target="_blank">Book Service in Fulton →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="county-card animate-on-scroll" onclick="toggleCounty(this)">
+                    <div class="county-header">
+                        <h3>Newton County</h3>
+                        <span class="county-arrow">▼</span>
+                    </div>
+                    <div class="county-cities">
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Covington</a>
+                        <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" target="_blank">Oxford</a>
+                        <div class="city-cta">
+                            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book-small" target="_blank">Book Service in Newton →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="areas-cta animate-on-scroll" style="text-align: center; margin-top: 50px;">
+                <p style="color: var(--text-light); margin-bottom: 20px;">Don't see your area? Give us a call - we may still be able to help!</p>
+                <a href="tel:678-789-4177" class="btn-primary" style="margin-right: 15px;">Call (678) 789-4177</a>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book gold" target="_blank">Book Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Gallery -->
+    <section class="work-gallery">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Our Work</span>
+                <h2 class="section-title"><a href="gallery.html" style="color: inherit; text-decoration: none; cursor: pointer;">Real Projects, Real Results</a></h2>
+                <div class="section-line"></div>
+                <p style="color: var(--text-light); max-width: 700px; margin: 0 auto;">
+                    <a href="gallery.html" style="color: var(--primary-gold); text-decoration: none;">Click here to see our complete photo & video gallery →</a>
+                </p>
+            </div>
+
+            <div class="gallery-grid animate-on-scroll">
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="gallery-item" target="_blank">
+                    <img src="images/IMG_8475.jpeg" alt="New Home Plumbing Installation - Water Line Rough-In">
+                    <div class="gallery-caption">
+                        <h4>New Construction Plumbing</h4>
+                        <p>Complete water line rough-in for new home</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">📅 Book This Service</span>
+                    </div>
+                </a>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="gallery-item" target="_blank">
+                    <img src="images/IMG_8471.jpeg" alt="Sewer Line Repair - Main Line Service">
+                    <div class="gallery-caption">
+                        <h4>Sewer Line Repair</h4>
+                        <p>Main line excavation and replacement</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">📅 Book This Service</span>
+                    </div>
+                </a>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="gallery-item" target="_blank">
+                    <img src="images/IMG_8470.jpeg" alt="Water Line Repair - Leak Detection and Fix">
+                    <div class="gallery-caption">
+                        <h4>Water Line Leak Repair</h4>
+                        <p>Underground leak detection and repair</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">📅 Book This Service</span>
+                    </div>
+                </a>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="gallery-item" target="_blank">
+                    <img src="images/IMG_8462.jpeg" alt="Water Heater Replacement - Old Corroded Unit">
+                    <div class="gallery-caption">
+                        <h4>Water Heater Replacement</h4>
+                        <p>Before: Severely corroded water heater</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">📅 Book This Service</span>
+                    </div>
+                </a>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="gallery-item" target="_blank">
+                    <img src="images/IMG_8464.jpeg" alt="Water Heater Installation - New A.O. Smith Unit">
+                    <div class="gallery-caption">
+                        <h4>New Water Heater Install</h4>
+                        <p>After: Brand new A.O. Smith water heater</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">📅 Book This Service</span>
+                    </div>
+                </a>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="gallery-item" target="_blank">
+                    <img src="images/IMG_8479.jpeg" alt="Complete Sewer Line Replacement Project">
+                    <div class="gallery-caption">
+                        <h4>Complete Project</h4>
+                        <p>Finished sewer line replacement</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">📅 Book This Service</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-cta animate-on-scroll" style="text-align: center; margin-top: 60px;">
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 20px;">Ready for Professional Service?</h3>
+                <p style="color: var(--text-light); margin-bottom: 30px;">Join thousands of satisfied customers throughout Atlanta metro</p>
+                <a href="tel:678-789-4177" class="btn-primary" style="margin-right: 15px;">Call (678) 789-4177</a>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-book gold" target="_blank">Schedule Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="margin-bottom: 25px; display: inline-block;">
+                        <img src="alp_logo_.jpg" alt="ALP Plumbing LLC - Plumber in Georgia Since 1997">
+                    </a>
+                    <p>Delivering excellence in residential and commercial plumbing services throughout Georgia and the greater Atlanta Metro area. Your trusted partner for all plumbing needs.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Google">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Residential Plumbing</a></li>
+                        <li><a href="#">Commercial Plumbing</a></li>
+                        <li><a href="#">Water Heaters</a></li>
+                        <li><a href="#">Drain Cleaning</a></li>
+                        <li><a href="#">Emergency Repairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Service Areas</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:678-789-4177">(678) 789-4177</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#a9c0c7cfc6e9c8c5d9d9c5dcc4cbc0c7cec5c5ca87cac6c4"><span class="__cf_email__" data-cfemail="3f565159507f5e534f4f534a525d56515853535c115c5052">[email&#160;protected]</span></a></li>
+                        <li><a href="#">2958 Centerville Rosebud Rd</a></li>
+                        <li><a href="#">Snellville, GA 30039</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 ALP Plumbing LLC. All rights reserved.</p>
+                <div class="footer-certifications">
+                    <span>Licensed</span>
+                    <span>Insured</span>
+                    <span>Bonded</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.preloader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav-container');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('mobile-active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('mobile-active');
+            });
+        });
+
+        // Reviews Carousel
+        const reviewsTrack = document.getElementById('reviewsTrack');
+        const slides = document.querySelectorAll('.review-slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevReview');
+        const nextBtn = document.getElementById('nextReview');
+        let currentSlide = 0;
+        let autoPlayInterval;
+
+        function updateCarousel() {
+            reviewsTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+
+            dots.forEach((dot, index) => {
+                dot.classList.remove('active');
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        nextBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            nextSlide();
+            startAutoPlay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            prevSlide();
+            startAutoPlay();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                stopAutoPlay();
+                goToSlide(index);
+                startAutoPlay();
+            });
+        });
+
+        startAutoPlay();
+
+        // Animate on scroll
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        animateElements.forEach(el => observer.observe(el));
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // County toggle function
+        function toggleCounty(card) {
+            // Don't toggle if clicking on a link inside
+            if (event.target.tagName === 'A') return;
+            
+            // Close other open counties
+            document.querySelectorAll('.county-card.active').forEach(c => {
+                if (c !== card) c.classList.remove('active');
+            });
+            
+            // Toggle this county
+            card.classList.toggle('active');
+        }
+    </script>
+
+    <!-- Sticky Mobile Booking Bar -->
+    <div class="mobile-booking-bar">
+        <div class="mobile-booking-bar-inner">
+            <a href="tel:678-789-4177" class="btn-call">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                Call Now
+            </a>
+            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-schedule" target="_blank">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                Book Online
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Book Button (Desktop) -->
+    <style>
+        .floating-book-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--logo-blue) 0%, #1a3a7e 100%);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            box-shadow: 0 8px 30px rgba(46, 74, 158, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        .floating-book-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(46, 74, 158, 0.5);
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 8px 30px rgba(46, 74, 158, 0.4); }
+            50% { box-shadow: 0 8px 40px rgba(46, 74, 158, 0.6); }
+        }
+        @media (max-width: 768px) {
+            .floating-book-btn {
+                display: none;
+            }
+        }
+    </style>
+    <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="floating-book-btn"
