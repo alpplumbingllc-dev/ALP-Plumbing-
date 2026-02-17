@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work Gallery | ALP Plumbing LLC</title>
+    <meta name="description" content="Browse our complete gallery of completed plumbing projects in Atlanta Metro. See real photos and videos of our professional work.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #C9A962;
+            --logo-blue: #2E4A9E;
+            --deep-navy: #0A1628;
+            --off-white: #F8F6F3;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--off-white); color: var(--text-dark); }
+        
+        /* Header */
+        header { background: var(--deep-navy); padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1400px; margin: 0 auto; padding: 0 50px; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 55px; background: white; padding: 8px 12px; border-radius: 4px; }
+        .nav-links { display: flex; gap: 50px; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--deep-navy) 0%, var(--logo-blue) 100%); padding: 100px 50px 80px; text-align: center; color: white; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 8vw, 5rem); font-weight: 300; margin-bottom: 20px; }
+        .accent { color: var(--primary-gold); font-style: italic; }
+        
+        /* Container */
+        .container { max-width: 1400px; margin: 0 auto; padding: 80px 50px; }
+        
+        /* Video Section */
+        .video-section { margin-bottom: 80px; }
+        .video-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--logo-blue); }
+        .coming-soon-box {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--logo-blue) 100%);
+            border-radius: 12px;
+            padding: 80px 40px;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .coming-soon-icon { font-size: 4rem; margin-bottom: 20px; }
+        .coming-soon-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; margin-bottom: 20px; }
+        .coming-soon-box p { font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.8; }
+        
+        /* Photo Gallery */
+        .gallery-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--logo-blue); }
+        .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .photo-item { position: relative; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 15px rgba(0,0,0,0.08); cursor: pointer; transition: transform 0.3s; }
+        .photo-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .photo-item img { width: 100%; height: 300px; object-fit: cover; display: block; }
+        .photo-caption { padding: 20px; }
+        .photo-caption h4 { font-size: 1.2rem; color: var(--logo-blue); margin-bottom: 8px; }
+        .photo-caption p { color: var(--text-light); font-size: 0.9rem; }
+        
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; align-items: center; justify-content: center; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90%; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 30px; right: 40px; color: white; font-size: 3rem; cursor: pointer; }
+        
+        /* CTA */
+        .cta-section { background: var(--logo-blue); color: white; padding: 80px 40px; text-align: center; margin: 80px 0; border-radius: 8px; }
+        .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 20px; }
+        .btn-primary { background: var(--primary-gold); color: var(--deep-navy); padding: 18px 45px; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; font-weight: 600; display: inline-block; }
+        
+        /* Footer */
+        footer { background: var(--deep-navy); color: rgba(255, 255, 255, 0.7); padding: 60px 50px 30px; text-align: center; }
+        footer p { margin: 10px 0; font-size: 0.9rem; }
+        
+        @media (max-width: 1024px) { .photo-grid { grid-template-columns: repeat(2, 1fr); } .video-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .nav-links { display: none; } .photo-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo"><img src="alp_logo_.jpg" alt="ALP Plumbing"></a>
+            <ul class="nav-links">
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#reviews">Reviews</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Our <span class="accent">Work</span> Gallery</h1>
+        <p style="font-size: 1.1rem; max-width: 700px; margin: 20px auto;">Explore photos and videos of our completed plumbing projects throughout Atlanta Metro</p>
+    </section>
+
+    <div class="container">
+        <!-- Video Section -->
+        <div class="video-section">
+            <h2>Project Videos</h2>
+            <div class="coming-soon-box">
+                <div class="coming-soon-icon">🎬</div>
+                <h3>Videos Coming Soon</h3>
+                <p>We're putting together project walkthrough videos and customer testimonials.<br>Check back soon to see our work in action!</p>
+                <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-primary" target="_blank" style="margin-top: 30px; display: inline-block;">Book Service Now</a>
+            </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="gallery-section">
+            <h2>Project Photos - Click to Enlarge</h2>
+            <div class="photo-grid">
+                <!-- Photo 1 -->
+                <div class="photo-item" onclick="openLightbox('images/IMG_8475.jpeg')">
+                    <img src="images/IMG_8475.jpeg" alt="New Construction Plumbing">
+                    <div class="photo-caption">
+                        <h4>New Construction Plumbing</h4>
+                        <p>Complete water line rough-in for new home</p>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="photo-item" onclick="openLightbox('images/IMG_8471.jpeg')">
+                    <img src="images/IMG_8471.jpeg" alt="Sewer Line Repair">
+                    <div class="photo-caption">
+                        <h4>Sewer Line Repair</h4>
+                        <p>Main line excavation and replacement</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="photo-item" onclick="openLightbox('images/IMG_8470.jpeg')">
+                    <img src="images/IMG_8470.jpeg" alt="Water Line Repair">
+                    <div class="photo-caption">
+                        <h4>Water Line Leak Repair</h4>
+                        <p>Underground leak detection and repair</p>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="photo-item" onclick="openLightbox('images/IMG_8462.jpeg')">
+                    <img src="images/IMG_8462.jpeg" alt="Water Heater Before">
+                    <div class="photo-caption">
+                        <h4>Water Heater - Before</h4>
+                        <p>Severely corroded water heater</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photo-item" onclick="openLightbox('images/IMG_8464.jpeg')">
+                    <img src="images/IMG_8464.jpeg" alt="Water Heater After">
+                    <div class="photo-caption">
+                        <h4>Water Heater - After</h4>
+                        <p>Brand new A.O. Smith installation</p>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photo-item" onclick="openLightbox('images/IMG_8479.jpeg')">
+                    <img src="images/IMG_8479.jpeg" alt="Completed Project">
+                    <div class="photo-caption">
+                        <h4>Complete Project</h4>
+                        <p>Finished sewer line replacement</p>
+                    </div>
+                </div>
+
+                <!-- Photo 7 -->
+                <div class="photo-item" onclick="openLightbox('images/IMG_8476.jpeg')">
+                    <img src="images/IMG_8476.jpeg" alt="Project Work">
+                    <div class="photo-caption">
+                        <h4>Professional Work</h4>
+                        <p>Quality plumbing installation</p>
+                    </div>
+                </div>
+
+                <!-- Photo 8 -->
+                <div class="photo-item" onclick="openLightbox('images/IMG_8477.jpeg')">
+                    <img src="images/IMG_8477.jpeg" alt="Plumbing Repair">
+                    <div class="photo-caption">
+                        <h4>Expert Repair</h4>
+                        <p>Professional plumbing service</p>
+                    </div>
+                </div>
+
+                <!-- Photo 9 -->
+                <div class="photo-item" onclick="openLightbox('images/ALP_Van.jpg')">
+                    <img src="images/ALP_Van.jpg" alt="ALP Service Vehicle">
+                    <div class="photo-caption">
+                        <h4>Our Service Vehicle</h4>
+                        <p>Serving Atlanta Metro since 1997</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>Ready for Professional Service?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Get the same quality workmanship for your home or business</p>
+            <a href="https://customer.dispatch.me/booking?account_id=37&org_id=248971" class="btn-primary" target="_blank">Book Service Now</a>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ALP Plumbing LLC. Licensed Plumber in Georgia.</p>
+        <p>2958 Centerville Rosebud Rd, Snellville, GA 30039 | (678) 789-4177</p>
+    </footer>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = src;
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
