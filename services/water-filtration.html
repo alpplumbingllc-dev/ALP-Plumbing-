@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Filtration Systems | ALP Plumbing LLC</title>
+    <meta name="description" content="Professional water filtration system installation and maintenance.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #C9A962;
+            --primary-gold-light: #E5D4A9;
+            --logo-blue: #2E4A9E;
+            --deep-navy: #0A1628;
+            --off-white: #F8F6F3;
+            --text-dark: #1A1A1A;
+            --text-light: #6B6B6B;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--off-white); color: var(--text-dark); line-height: 1.7; }
+        .nav-container { background: var(--deep-navy); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1400px; margin: 0 auto; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 55px; background: white; padding: 8px 12px; border-radius: 4px; }
+        .nav-links { display: flex; gap: 50px; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+        .hero { background: linear-gradient(135deg, var(--deep-navy) 0%, var(--logo-blue) 100%); padding: 150px 50px 100px; text-align: center; color: white; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 8vw, 5rem); font-weight: 300; margin-bottom: 30px; }
+        .accent { color: var(--primary-gold); font-style: italic; }
+        .services-section { max-width: 1200px; margin: 80px auto; padding: 0 50px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .service-card { background: white; padding: 40px; border-left: 3px solid var(--primary-gold); }
+        .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 20px; color: var(--logo-blue); }
+        .service-card ul { list-style: none; margin-top: 20px; }
+        .service-card li { padding: 8px 0; color: var(--text-light); position: relative; padding-left: 20px; }
+        .service-card li:before { content: "•"; position: absolute; left: 0; color: var(--primary-gold); font-weight: bold; }
+        .cta-section { background: linear-gradient(135deg, var(--logo-blue) 0%, #1a3a7e 100%); padding: 80px 50px; text-align: center; color: white; margin: 80px 0; }
+        .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 20px; }
+        .btn-primary { background: var(--primary-gold); color: var(--deep-navy); padding: 18px 45px; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; font-weight: 600; display: inline-block; }
+        footer { background: var(--deep-navy); color: rgba(255, 255, 255, 0.7); padding: 60px 50px 30px; text-align: center; }
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <a href="../" class="logo"><img src="../alp_logo_.jpg" alt="ALP Plumbing LLC"></a>
+            <ul class="nav-links">
+                <li><a href="../#services">Services</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <h1>Water <span class="accent">Filtration</span> Systems</h1>
+        <p>Clean, pure water for your home or business</p>
+    </section>
+
+    <div class="services-section">
+        <div class="services-grid">
+    <div class="service-card">
+        <h3>Whole House Systems</h3>
+        <ul>
+            <li>Whole-house filtration</li>
+            <li>Water softeners</li>
+            <li>Iron removal</li>
+            <li>Sediment filters</li>
+            <li>UV purification</li>
+        </ul>
+    </div>
+    <div class="service-card">
+        <h3>Drinking Water Systems</h3>
+        <ul>
+            <li>Reverse osmosis</li>
+            <li>Under-sink filters</li>
+            <li>Refrigerator lines</li>
+            <li>Instant hot water</li>
+            <li>Filter replacement</li>
+        </ul>
+    </div>
+    <div class="service-card">
+        <h3>Installation & Service</h3>
+        <ul>
+            <li>System installation</li>
+            <li>Filter replacement</li>
+            <li>System maintenance</li>
+            <li>Water testing</li>
+            <li>Repairs</li>
+        </ul>
+    </div>
+    <div class="service-card">
+        <h3>Commercial Systems</h3>
+        <ul>
+            <li>Restaurant filtration</li>
+            <li>Office water systems</li>
+            <li>Industrial filtration</li>
+            <li>Ice machines</li>
+            <li>Coffee equipment</li>
+        </ul>
+    </div>
+</div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Need Water Filtration?</h2>
+        <p>Call now for professional service in Snellville, Lawrenceville & Atlanta Metro</p>
+        <a href="tel:678-789-4177" class="btn-primary">Call (678) 789-4177</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 ALP Plumbing LLC. Licensed Plumber in Georgia.</p>
+            <p>2958 Centerville Rosebud Rd, Snellville, GA 30039 | (678) 789-4177</p>
+        </div>
+    </footer>
+</body>
+</html>
